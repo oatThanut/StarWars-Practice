@@ -1,0 +1,31 @@
+PODS:
+  - Apollo (0.6.5):
+    - Apollo/Core (= 0.6.5)
+  - Apollo/Core (0.6.5)
+  - RxCocoa (4.2.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.2.0)
+  - SnapKit (4.0.0)
+
+DEPENDENCIES:
+  - Apollo (~> 0.6.5)
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
+  - SnapKit (~> 4.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Apollo
+    - RxCocoa
+    - RxSwift
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Apollo: 575496b1fbdb27a47c0e62a48340da2bd1dc67d7
+  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
+  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+
+PODFILE CHECKSUM: e9b0d3c674ac026dc33bc283517b8eaf438bbf9e
+
+COCOAPODS: 1.5.3
