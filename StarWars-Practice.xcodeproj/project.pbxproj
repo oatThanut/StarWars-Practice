@@ -13,7 +13,9 @@
 		125A01A020D269AB0064232E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 125A019F20D269AB0064232E /* Assets.xcassets */; };
 		125A01A320D269AB0064232E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 125A01A120D269AB0064232E /* LaunchScreen.storyboard */; };
 		125A01AC20D26B5A0064232E /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 125A01AB20D26B5A0064232E /* schema.json */; };
-		12F24DC120D27D560036029A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F24DC020D27D560036029A /* API.swift */; };
+		12F24DC120D27D560036029A /* Output.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F24DC020D27D560036029A /* Output.swift */; };
+		12F24DC920D364CC0036029A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F24DC820D364CC0036029A /* RootViewController.swift */; };
+		12F24DCD20D365170036029A /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F24DCC20D365170036029A /* HomeTableViewController.swift */; };
 		C37D30D5F85090EE4E9A201D /* Pods_StarWars_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54D57729C5EFABC329E82808 /* Pods_StarWars_Practice.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +28,9 @@
 		125A01A220D269AB0064232E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		125A01A420D269AB0064232E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		125A01AB20D26B5A0064232E /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
-		12F24DC020D27D560036029A /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		12F24DC020D27D560036029A /* Output.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Output.swift; sourceTree = "<group>"; };
+		12F24DC820D364CC0036029A /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		12F24DCC20D365170036029A /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		40E44482A6EC3983B8741757 /* Pods-StarWars-Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWars-Practice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarWars-Practice/Pods-StarWars-Practice.debug.xcconfig"; sourceTree = "<group>"; };
 		54D57729C5EFABC329E82808 /* Pods_StarWars_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWars_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E5F1B2DFE5480B7CF0727F /* Pods-StarWars-Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWars-Practice.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarWars-Practice/Pods-StarWars-Practice.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,16 +69,82 @@
 		125A019720D269AA0064232E /* StarWars-Practice */ = {
 			isa = PBXGroup;
 			children = (
-				12F24DC020D27D560036029A /* API.swift */,
+				12F24DD020D379D10036029A /* API */,
+				12F24DC220D3643A0036029A /* Module */,
 				125A019820D269AA0064232E /* AppDelegate.swift */,
-				125A019A20D269AA0064232E /* ViewController.swift */,
 				125A019C20D269AA0064232E /* Main.storyboard */,
 				125A019F20D269AB0064232E /* Assets.xcassets */,
 				125A01A120D269AB0064232E /* LaunchScreen.storyboard */,
 				125A01A420D269AB0064232E /* Info.plist */,
-				125A01AB20D26B5A0064232E /* schema.json */,
 			);
 			path = "StarWars-Practice";
+			sourceTree = "<group>";
+		};
+		12F24DC220D3643A0036029A /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				12F24DC520D364780036029A /* Root */,
+				12F24DC420D3645E0036029A /* Detail */,
+				12F24DC320D364550036029A /* Home */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		12F24DC320D364550036029A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				12F24DCB20D365020036029A /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		12F24DC420D3645E0036029A /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				12F24DCA20D364F70036029A /* View */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		12F24DC520D364780036029A /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				12F24DC720D364AA0036029A /* View */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		12F24DC720D364AA0036029A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				12F24DC820D364CC0036029A /* RootViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		12F24DCA20D364F70036029A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				125A019A20D269AA0064232E /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		12F24DCB20D365020036029A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				12F24DCC20D365170036029A /* HomeTableViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		12F24DD020D379D10036029A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				12F24DC020D27D560036029A /* Output.swift */,
+				125A01AB20D26B5A0064232E /* schema.json */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		538E37CC26FA7BA932337F59 /* Frameworks */ = {
@@ -177,7 +247,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-codegen.sh generate $(find . -name '*.graphql') --schema schema.json --output API.swift";
+			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-codegen.sh generate $(find . -name 'API/*.graphql') --schema API/schema.json --output API/Output.swift";
 		};
 		57BC522A76C9F1CE6D3CB9C7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -229,8 +299,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				125A019B20D269AA0064232E /* ViewController.swift in Sources */,
-				12F24DC120D27D560036029A /* API.swift in Sources */,
+				12F24DC120D27D560036029A /* Output.swift in Sources */,
+				12F24DC920D364CC0036029A /* RootViewController.swift in Sources */,
 				125A019920D269AA0064232E /* AppDelegate.swift in Sources */,
+				12F24DCD20D365170036029A /* HomeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
